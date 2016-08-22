@@ -466,7 +466,7 @@ function StickyTableHeader(options, scrollableElement) {
 
     for (var i = 0; i < tableHeaderCells.length; i++) {
       var $tableHeaderCell = tableHeaderCells[i];
-      var origValues       = _origHeaderStyleWidths[i];
+      var origValues       = _origHeaderStyleWidths[i] || {};
 
       if (origValues.width == null) {
         $tableHeaderCell.style.removeProperty('width');
